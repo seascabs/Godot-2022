@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var speed = 200  # speed in pixels/sec
 var velocity = Vector2.ZERO
+var points = 0
 
 func get_input():
 	velocity = Vector2.ZERO
@@ -18,4 +19,10 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	velocity = move_and_slide(velocity)
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		var body = collision.collider
+		if body.name == "Moth":
+			points = points + 1
+			body.queue_free()
+			print(points)
