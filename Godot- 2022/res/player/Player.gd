@@ -81,7 +81,10 @@ func _physics_process(delta):
 			$AnimatedSprite.play('eat')
 
 	update_lights()
+	update_echo()
 
+func update_echo() -> void:
+	$echo.scale = Vector2.ONE * MicInput.power
 
 func _on_AnimatedSprite_animation_finished() -> void:
 	if $AnimatedSprite.animation != 'default':
