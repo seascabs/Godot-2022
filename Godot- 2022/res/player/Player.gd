@@ -14,6 +14,7 @@ var drag = 0.03
 var speed = 300  # speed in pixels/sec
 var velocity = Vector2.ZERO
 var points = 0
+var target_points = 10
 
 func _ready() -> void:
 	init_rays()
@@ -94,13 +95,9 @@ func _physics_process(delta):
 		var body = collision.collider
 		if "Moth" in body.name:
 			points = points + 1
-			var image = load("res://res/MothDead.png")
-			if(points == 1):
-				get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Moth1").set_texture(image)
-			if(points == 2):
-				get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Moth2").set_texture(image)
+			GameService.emit_signal('update_moth_points', points)
 			body.queue_free()
-			if(points > 2):
+			if(points > target_points):
 				get_tree().change_scene("res://res/EndScreen.tscn")
 			$AnimatedSprite.play('eat')
 

@@ -33,6 +33,7 @@ enable_audio_input=true
 MicInput="*res://res/mic_input/mic_input.tscn"
 MusicPlayer="*res://res/music/music_player.tscn"
 PlayerService="*res://res/globals/player_service.gd"
+GameService="*res://res/globals/game_service.gd"
 
 [display]
 

@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://res/level/level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://res/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://res/game/camera.gd" type="Script" id=3]
-[ext_resource path="res://res/Game Jam Art Assets/MothAlive.png" type="Texture" id=4]
+[ext_resource path="res://res/ui/micross.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://res/Echo-Loud.png" type="Texture" id=5]
+[ext_resource path="res://res/MothDead.png" type="Texture" id=6]
+[ext_resource path="res://res/ui/count.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 4 )
 
 [node name="game" type="Node2D"]
 
@@ -25,6 +31,46 @@ target_node = NodePath("../player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -40.0
+margin_bottom = 40.0
+grow_horizontal = 0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 197.0
+margin_bottom = 80.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+margin_right = 103.0
+margin_bottom = 60.0
+texture = ExtResource( 6 )
+
+[node name="spacer" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+margin_left = 107.0
+margin_top = 1.0
+margin_right = 120.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = " "
+
+[node name="count" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+margin_left = 124.0
+margin_top = 1.0
+margin_right = 177.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "x0"
+script = ExtResource( 7 )
+
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -32,27 +78,6 @@ anchor_bottom = 1.0
 [node name="UI" type="TextureRect" parent="CanvasLayer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-
-[node name="Moth1" type="TextureRect" parent="CanvasLayer/Control/UI"]
-margin_left = 1601.0
-margin_top = 12.0
-margin_right = 1704.0
-margin_bottom = 72.0
-texture = ExtResource( 4 )
-
-[node name="Moth2" type="TextureRect" parent="CanvasLayer/Control/UI"]
-margin_left = 1708.0
-margin_top = 12.0
-margin_right = 1811.0
-margin_bottom = 72.0
-texture = ExtResource( 4 )
-
-[node name="Moth3" type="TextureRect" parent="CanvasLayer/Control/UI"]
-margin_left = 1814.0
-margin_top = 12.0
-margin_right = 1917.0
-margin_bottom = 72.0
-texture = ExtResource( 4 )
 
 [node name="Micsound" type="TextureRect" parent="CanvasLayer/Control/UI"]
 margin_left = 9.0

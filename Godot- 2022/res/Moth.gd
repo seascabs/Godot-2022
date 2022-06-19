@@ -25,6 +25,8 @@ const waitBase = 40
 const speed = 200
 const randRange = 100
 
+const MAX_PLAYER_DISTANCE = 900
+
 onready var start_position = global_position
 onready var target_position = global_position
 
@@ -49,7 +51,7 @@ func _physics_process(delta):
 	if PlayerService.player:
 		ray.cast_to = PlayerService.player.global_position - global_position
 		var collider = ray.get_collider()
-		if collider and collider is Player:
+		if collider and collider is Player and global_position.distance_to(PlayerService.player.global_position) < MAX_PLAYER_DISTANCE:
 			var normal = ray.get_collision_normal()
 			if abs(normal.x) > abs(normal.y):
 				if normal.x < 0:
