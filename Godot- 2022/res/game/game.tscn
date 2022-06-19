@@ -85,3 +85,6 @@ margin_top = 986.0
 margin_right = 112.0
 margin_bottom = 1071.0
 texture = ExtResource( 5 )
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+volume_db = 12.235

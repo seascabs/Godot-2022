@@ -95,6 +95,15 @@ func _physics_process(delta):
 		var body = collision.collider
 		if "Moth" in body.name:
 			points = points + 1
+			if(points % 3 == 0):
+				get_tree().get_current_scene().get_node("sound").stream = load("res://res/Moth1.wav")
+				get_tree().get_current_scene().get_node("sound").play()
+			elif(points % 3 == 1):
+				get_tree().get_current_scene().get_node("sound").stream = load("res://res/Moth2.wav")
+				get_tree().get_current_scene().get_node("sound").play()
+			if(points % 3 == 2):
+				get_tree().get_current_scene().get_node("sound").stream = load("res://res/Moth3.wav")
+				get_tree().get_current_scene().get_node("sound").play()
 			GameService.emit_signal('update_moth_points', points)
 			body.queue_free()
 			if(points > target_points):
