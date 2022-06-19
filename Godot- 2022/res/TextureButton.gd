@@ -2,7 +2,7 @@ extends TextureButton
 
 
 func _ready():
-	pass 
-	
+	pass
+
 func _pressed ( ):
-	get_tree().change_scene("res://res/game/game.tscn")
+	get_tree().change_scene("res://res/Instructions.tscn")

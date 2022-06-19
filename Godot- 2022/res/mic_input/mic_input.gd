@@ -29,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 	sample_power = clamp(db2linear(sample_power) * amplification, 0.0, 1.0)
 
 	last_samples.append(sample_power)
-	if last_samples.size() > sensitivity:
+	while last_samples.size() > sensitivity:
 		last_samples.pop_front()
 
 	power = average_power()
