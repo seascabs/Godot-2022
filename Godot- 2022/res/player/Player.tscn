@@ -37,6 +37,9 @@ script = ExtResource( 3 )
 position = Vector2( 0, 1 )
 shape = SubResource( 2 )
 
+[node name="echo" type="Sprite" parent="."]
+texture = ExtResource( 13 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
@@ -62,8 +65,5 @@ shadow_gradient_length = 15.0
 stream = ExtResource( 11 )
 volume_db = -5.0
 autoplay = true
-
-[node name="echo" type="Sprite" parent="."]
-texture = ExtResource( 13 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
