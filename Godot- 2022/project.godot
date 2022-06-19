@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Godot- 2022"
-run/main_scene="res://res/tile.tscn"
+run/main_scene="res://res/game/game.tscn"
 config/icon="res://icon.png"
 
 [audio]
