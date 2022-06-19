@@ -1,0 +1,168 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Backgroundtile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levelbounds.tscn" type="PackedScene" id=2]
+
+[node name="level" type="Node2D"]
+
+[node name="background_tile" parent="." instance=ExtResource( 1 )]
+
+[node name="bounds" type="Node2D" parent="."]
+
+[node name="bottom" type="Node2D" parent="bounds"]
+
+[node name="level_bounds" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( 256, 2176 )
+
+[node name="level_bounds2" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( 768, 2176 )
+
+[node name="level_bounds3" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( 1280, 2176 )
+
+[node name="level_bounds4" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( 1792, 2176 )
+
+[node name="level_bounds5" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( 2304, 2176 )
+
+[node name="level_bounds12" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( -2304, 2176 )
+
+[node name="level_bounds13" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( -1792, 2176 )
+
+[node name="level_bounds14" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( -1280, 2176 )
+
+[node name="level_bounds15" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( -768, 2176 )
+
+[node name="level_bounds16" parent="bounds/bottom" instance=ExtResource( 2 )]
+position = Vector2( -256, 2176 )
+
+[node name="top" type="Node2D" parent="bounds"]
+
+[node name="level_bounds" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( 272, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds2" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( 784, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds3" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( 1296, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds4" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( 1808, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds5" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( 2320, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds12" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( -2288, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds13" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( -1776, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds14" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( -1264, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds15" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( -752, -2176 )
+rotation = 3.14159
+
+[node name="level_bounds16" parent="bounds/top" instance=ExtResource( 2 )]
+position = Vector2( -240, -2176 )
+rotation = 3.14159
+
+[node name="left" type="Node2D" parent="bounds"]
+
+[node name="level_bounds" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, 256 )
+rotation = 1.5708
+
+[node name="level_bounds2" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, 768 )
+rotation = 1.5708
+
+[node name="level_bounds3" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, 1280 )
+rotation = 1.5708
+
+[node name="level_bounds4" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, 1792 )
+rotation = 1.5708
+
+[node name="level_bounds5" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, 2304 )
+rotation = 1.5708
+
+[node name="level_bounds6" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, -2304 )
+rotation = 1.5708
+
+[node name="level_bounds7" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, -1792 )
+rotation = 1.5708
+
+[node name="level_bounds8" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, -1280 )
+rotation = 1.5708
+
+[node name="level_bounds9" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, -768 )
+rotation = 1.5708
+
+[node name="level_bounds10" parent="bounds/left" instance=ExtResource( 2 )]
+position = Vector2( -2176, -256 )
+rotation = 1.5708
+
+[node name="right" type="Node2D" parent="bounds"]
+
+[node name="level_bounds" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, 256 )
+rotation = -1.5708
+
+[node name="level_bounds2" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, 768 )
+rotation = -1.5708
+
+[node name="level_bounds3" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, 1280 )
+rotation = -1.5708
+
+[node name="level_bounds4" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, 1792 )
+rotation = -1.5708
+
+[node name="level_bounds5" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, 2304 )
+rotation = -1.5708
+
+[node name="level_bounds6" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, -2304 )
+rotation = -1.5708
+
+[node name="level_bounds7" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, -1792 )
+rotation = -1.5708
+
+[node name="level_bounds8" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, -1280 )
+rotation = -1.5708
+
+[node name="level_bounds9" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, -768 )
+rotation = -1.5708
+
+[node name="level_bounds10" parent="bounds/right" instance=ExtResource( 2 )]
+position = Vector2( 2176, -256 )
+rotation = -1.5708

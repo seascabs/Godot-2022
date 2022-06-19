@@ -35,34 +35,12 @@ func _physics_process(delta):
 			countdown = countdownBase
 	else:
 		if countdown > 0:
-			match direction:
-				NORTH:
-					isLeftRight = 0
-					velocity = Vector2(0, speed)
-					velocity.x = randNum(randRange * -1, randRange)
-				SOUTH:
-					isLeftRight = 0
-					velocity = Vector2(0, -1 * speed)
-					velocity.x = randNum(randRange * -1, randRange)
-				EAST:
-					isLeftRight = 1
-					velocity = Vector2(speed, 0)
-					velocity.y = randNum(randRange * -1, randRange)
-				WEST:
-					isLeftRight = 1
-					velocity = Vector2(-1 * speed, 0)
-					velocity.y = randNum(randRange * -1, randRange)
+			GetRandomMothVelocity()
 			
 			countdown = countdown - 1
 			velocity = move_and_slide(velocity)
-			if(isLeftRight):
-				if(velocity.x == 0):
-					print("switching directions")
-					countdown = 0
-			else:
-				if(velocity.y == 0):
-					print("switching directions")
-					countdown = 0
+			CheckForWallCollision(velocity)
+			
 		else:
 			wait = waitBase
 
@@ -72,3 +50,30 @@ func randNum(from, to):
 	var numRange = abs(to - from)
 	var random_value = (random_generator.randi() % numRange) + from
 	return random_value
+
+func CheckForWallCollision(velocity):
+	if(isLeftRight):
+		if(velocity.x == 0):
+			countdown = 0
+	else:
+		if(velocity.y == 0):
+			countdown = 0
+
+func GetRandomMothVelocity():
+	match direction:
+		NORTH:
+			isLeftRight = 0
+			velocity = Vector2(0, speed)
+			velocity.x = randNum(randRange * -1, randRange)
+		SOUTH:
+			isLeftRight = 0
+			velocity = Vector2(0, -1 * speed)
+			velocity.x = randNum(randRange * -1, randRange)
+		EAST:
+			isLeftRight = 1
+			velocity = Vector2(speed, 0)
+			velocity.y = randNum(randRange * -1, randRange)
+		WEST:
+			isLeftRight = 1
+			velocity = Vector2(-1 * speed, 0)
+			velocity.y = randNum(randRange * -1, randRange)
