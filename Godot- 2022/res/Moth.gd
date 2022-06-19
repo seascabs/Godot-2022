@@ -20,7 +20,7 @@ var isLeftRight = 0
 
 const countdownBase = 200
 const waitBase = 40
-const speed = 20
+const speed = 200
 const randRange = 100
 
 onready var start_position = global_position
