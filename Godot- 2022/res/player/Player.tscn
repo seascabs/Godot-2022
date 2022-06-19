@@ -20,7 +20,7 @@ animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "default",
-"speed": 8.0
+"speed": 13.0
 } ]
 
 [node name="player" type="KinematicBody2D"]
@@ -33,7 +33,7 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.303571 )
 frames = SubResource( 1 )
-frame = 3
+frame = 4
 playing = true
 __meta__ = {
 "_edit_lock_": true

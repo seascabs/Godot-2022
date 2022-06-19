@@ -1,9 +1,12 @@
 extends KinematicBody2D
 
+const LIGHT_TEXTURE = preload('res://res/player/local_light.png')
+
 var number_of_rays: int = 10
 var ray_length: float = 2000
 
 var default_main_light_scale: Vector2 = Vector2.ONE * 0.75
+var default_ray_light_energy: float = 1.0
 
 var acceleration = 10
 var drag = 0.03
@@ -24,8 +27,11 @@ func init_rays() -> void:
 		ray.enabled = true
 
 		var ray_light = Light2D.new()
-		ray_light.energy = $main_light.energy
+		ray_light.scale = Vector2.ONE * 0.8
 		ray_light.mode = Light2D.MODE_MIX
+		ray_light.range_height = 40
+		ray_light.enabled = true
+		ray_light.texture = LIGHT_TEXTURE
 		$ray_lights.add_child(ray_light)
 
 func update_lights() -> void:
@@ -36,6 +42,9 @@ func update_lights() -> void:
 
 		if (ray as RayCast2D).get_collider():
 			light.global_position = ray.get_collision_point()
+			light.energy = default_ray_light_energy * MicInput.power
+		else:
+			light.energy = 0
 
 func get_input() -> Vector2:
 	var move = Vector2.ZERO
