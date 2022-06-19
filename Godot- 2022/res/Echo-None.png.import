@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Echo-None.png-4b7b89623ae67c2ed36e486d42c91228.stex"
+path="res://.import/Echo-None.png-9450458a470a12b20e4fc7175da9a379.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Game Jam Art Assets/Echo-None.png"
-dest_files=[ "res://.import/Echo-None.png-4b7b89623ae67c2ed36e486d42c91228.stex" ]
+source_file="res://res/Echo-None.png"
+dest_files=[ "res://.import/Echo-None.png-9450458a470a12b20e4fc7175da9a379.stex" ]
 
 [params]
 

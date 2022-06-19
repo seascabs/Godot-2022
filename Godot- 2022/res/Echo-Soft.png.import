@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Echo-Soft.png-88bda5d4ec6a2961bf4dd3aca882d5aa.stex"
+path="res://.import/Echo-Soft.png-2717210e7a1c418200afc35e09d11bec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Game Jam Art Assets/Echo-Soft.png"
-dest_files=[ "res://.import/Echo-Soft.png-88bda5d4ec6a2961bf4dd3aca882d5aa.stex" ]
+source_file="res://res/Echo-Soft.png"
+dest_files=[ "res://.import/Echo-Soft.png-2717210e7a1c418200afc35e09d11bec.stex" ]
 
 [params]
 

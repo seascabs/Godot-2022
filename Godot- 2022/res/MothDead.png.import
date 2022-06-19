@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Echo-Loudest.png-ed0f958764c314878df1980ad8dfae5b.stex"
+path="res://.import/MothDead.png-cd004f774a3b4c097880942e15efa9c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Game Jam Art Assets/Echo-Loudest.png"
-dest_files=[ "res://.import/Echo-Loudest.png-ed0f958764c314878df1980ad8dfae5b.stex" ]
+source_file="res://res/MothDead.png"
+dest_files=[ "res://.import/MothDead.png-cd004f774a3b4c097880942e15efa9c3.stex" ]
 
 [params]
 

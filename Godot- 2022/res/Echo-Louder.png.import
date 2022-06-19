@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Echo-Louder.png-4bdbdea830d503edaae973c506b91449.stex"
+path="res://.import/Echo-Louder.png-7f09e5a8a4e394c52ae95ebec290dd2d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Game Jam Art Assets/Echo-Louder.png"
-dest_files=[ "res://.import/Echo-Louder.png-4bdbdea830d503edaae973c506b91449.stex" ]
+source_file="res://res/Echo-Louder.png"
+dest_files=[ "res://.import/Echo-Louder.png-7f09e5a8a4e394c52ae95ebec290dd2d.stex" ]
 
 [params]
 

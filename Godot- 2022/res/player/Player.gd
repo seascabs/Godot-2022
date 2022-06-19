@@ -45,6 +45,27 @@ func update_lights() -> void:
 			light.energy = default_ray_light_energy * MicInput.power
 		else:
 			light.energy = 0
+			
+		if(light.energy * 100 == 0):
+			print("level 1")
+			var image = load("res://res/Echo-None.png")
+			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
+		elif(light.energy * 100 > 0 && light.energy * 100 <= 16):
+			print("level 2")
+			var image = load("res://res/Echo-None.png")
+			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
+		elif(light.energy * 100 > 16 && light.energy * 100 <= 32):
+			print("level 3")
+			var image = load("res://res/Echo-Loud.png")
+			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
+		elif(light.energy * 100 > 32 && light.energy * 100 <= 50):
+			print("level 4")
+			var image = load("res://res/Echo-Louder.png")
+			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
+		elif(light.energy * 100 > 50):
+			print("level 5")
+			var image = load("res://res/Echo-Loudest.png")
+			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
 
 func get_input() -> Vector2:
 	var move = Vector2.ZERO
@@ -76,6 +97,11 @@ func _physics_process(delta):
 		var body = collision.collider
 		if "Moth" in body.name:
 			points = points + 1
+			var image = load("res://res/MothDead.png")
+			if(points == 1):
+				get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Moth1").set_texture(image)
+			if(points == 2):
+				get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Moth2").set_texture(image)
 			body.queue_free()
 			if(points > 2):
 				get_tree().change_scene("res://res/EndScreen.tscn")
