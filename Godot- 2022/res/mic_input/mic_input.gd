@@ -1,6 +1,8 @@
 extends Node
 
+# Number of samples to average out
 var sensitivity: int = 10
+# Power strength is multiplied by this value
 var amplification: float = 1.0
 
 var recording
