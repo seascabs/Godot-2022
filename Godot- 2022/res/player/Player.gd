@@ -8,9 +8,9 @@ var ray_length: float = 2000
 var default_main_light_scale: Vector2 = Vector2.ONE * 0.75
 var default_ray_light_energy: float = 1.0
 
-var acceleration = 10
+var acceleration = 20
 var drag = 0.03
-var speed = 200  # speed in pixels/sec
+var speed = 300  # speed in pixels/sec
 var velocity = Vector2.ZERO
 var points = 0
 
@@ -82,7 +82,10 @@ func _physics_process(delta):
 			$AnimatedSprite.play('eat')
 
 	update_lights()
+	update_echo()
 
+func update_echo() -> void:
+	$echo.scale = Vector2.ONE * MicInput.power
 
 func _on_AnimatedSprite_animation_finished() -> void:
 	if $AnimatedSprite.animation != 'default':
