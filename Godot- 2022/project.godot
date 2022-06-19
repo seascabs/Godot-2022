@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://res/player/Player.gd"
+} ]
+_global_script_class_icons={
+"Player": ""
+}
+
 [application]
 
 config/name="Godot- 2022"
@@ -22,6 +32,7 @@ enable_audio_input=true
 
 MicInput="*res://res/mic_input/mic_input.tscn"
 MusicPlayer="*res://res/music/music_player.tscn"
+PlayerService="*res://res/globals/player_service.gd"
 
 [display]
 

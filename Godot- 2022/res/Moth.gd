@@ -12,6 +12,8 @@ enum {
 	WEST = 3
 }
 
+onready var ray = $RayCast2D
+
 var velocity = Vector2.ZERO
 var direction = 1
 var countdown = 200
@@ -43,6 +45,23 @@ func _physics_process(delta):
 
 		else:
 			wait = waitBase
+
+	if PlayerService.player:
+		ray.cast_to = PlayerService.player.global_position - global_position
+		var collider = ray.get_collider()
+		if collider and collider is Player:
+			var normal = ray.get_collision_normal()
+			if abs(normal.x) > abs(normal.y):
+				if normal.x < 0:
+					direction = WEST
+				else:
+					direction = EAST
+			else:
+				if normal.y < 0:
+					direction = SOUTH
+				else:
+					direction = NORTH
+
 
 func randNum(from, to):
 	var random_generator = RandomNumberGenerator.new()

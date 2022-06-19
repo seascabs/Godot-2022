@@ -1,3 +1,4 @@
+class_name Player
 extends KinematicBody2D
 
 const LIGHT_TEXTURE = preload('res://res/player/local_light.png')
@@ -16,6 +17,7 @@ var points = 0
 
 func _ready() -> void:
 	init_rays()
+	PlayerService.player = self
 
 func init_rays() -> void:
 	var step = 2 * PI / number_of_rays
@@ -45,25 +47,20 @@ func update_lights() -> void:
 			light.energy = default_ray_light_energy * MicInput.power
 		else:
 			light.energy = 0
-			
+
 		if(light.energy * 100 == 0):
-			print("level 1")
 			var image = load("res://res/Echo-None.png")
 			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
 		elif(light.energy * 100 > 0 && light.energy * 100 <= 16):
-			print("level 2")
 			var image = load("res://res/Echo-None.png")
 			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
 		elif(light.energy * 100 > 16 && light.energy * 100 <= 32):
-			print("level 3")
 			var image = load("res://res/Echo-Loud.png")
 			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
 		elif(light.energy * 100 > 32 && light.energy * 100 <= 50):
-			print("level 4")
 			var image = load("res://res/Echo-Louder.png")
 			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
 		elif(light.energy * 100 > 50):
-			print("level 5")
 			var image = load("res://res/Echo-Loudest.png")
 			get_tree().get_current_scene().get_node("CanvasLayer/Control/UI/Micsound").set_texture(image)
 
