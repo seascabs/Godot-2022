@@ -78,5 +78,11 @@ func _physics_process(delta):
 			points = points + 1
 			body.queue_free()
 			print(points)
+			$AnimatedSprite.play('eat')
 
 	update_lights()
+
+
+func _on_AnimatedSprite_animation_finished() -> void:
+	if $AnimatedSprite.animation != 'default':
+		$AnimatedSprite.play('default')
