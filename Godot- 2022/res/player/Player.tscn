@@ -1,0 +1,49 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://res/player/art/bat_fly/bat_fly3.png" type="Texture" id=1]
+[ext_resource path="res://res/player/local_light.png" type="Texture" id=2]
+[ext_resource path="res://res/player/Player.gd" type="Script" id=3]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly2.png" type="Texture" id=4]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly7.png" type="Texture" id=5]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly5.png" type="Texture" id=6]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly1.png" type="Texture" id=7]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly6.png" type="Texture" id=8]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly4.png" type="Texture" id=9]
+[ext_resource path="res://res/player/art/bat_fly/bat_fly8.png" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.0
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[node name="player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.3, 0.303571 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="echo_rays" type="Node2D" parent="."]
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 2 )
+energy = 1.2
+mode = 2
+range_height = 80.0
+shadow_enabled = true
+shadow_gradient_length = 15.0

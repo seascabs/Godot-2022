@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Backgroundtile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levelbounds.tscn" type="PackedScene" id=2]
+[ext_resource path="res://res/stalagmites/stalagmites.tscn" type="PackedScene" id=3]
+[ext_resource path="res://res/stalagmites/stalagmite.tscn" type="PackedScene" id=4]
 
 [node name="level" type="Node2D"]
 
@@ -166,3 +168,217 @@ rotation = -1.5708
 [node name="level_bounds10" parent="bounds/right" instance=ExtResource( 2 )]
 position = Vector2( 2176, -256 )
 rotation = -1.5708
+
+[node name="stalagmites" parent="." instance=ExtResource( 3 )]
+
+[node name="stalagmite" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -736, 384 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite2" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1047, -33 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite3" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -722, -522 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite53" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1063, 800 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite4" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1280, 352 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite5" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -992, 64 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite6" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1840, 816 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite7" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1904, 32.0001 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite8" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1904, -944 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite9" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1888, -1808 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite10" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1328, -1968 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite11" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 960, -1872 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite12" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 266, -1501 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite13" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 832, -944 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite14" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 48, -774 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite15" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -944, -752 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite16" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1392, -1168 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite17" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -864, -1216 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite18" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1056, -1552 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite19" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1211, 984 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite20" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1296, 1064 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite21" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1760, 1552 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite22" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1168, 1840 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite23" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -1125, 1074 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite24" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -336, 1856 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite25" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 48, 1600 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite26" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -288, 1200 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite27" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -337, 727 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite28" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 112, 616 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite29" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 165, 499 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite30" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -577, -95 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite31" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 277, -332 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite32" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 615, -69 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite33" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 621, 437 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite34" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 730, 889 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite35" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 656, 1504 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite36" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1186, 1929 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite37" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1735, 1034 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite38" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1637, 955 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite39" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1760, 720 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite40" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1152, 526 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite41" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 950, 153 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite42" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1712, 160 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite43" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1344, -352 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite44" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1776, -784 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite45" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 864, -496 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite46" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 432, -640 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite47" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 320, -1184 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite52" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -389, -975 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite48" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( -400, -1792 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite49" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1280, -1232 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="stalagmite50" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 1760, -1680 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="stalagmite51" parent="stalagmites" instance=ExtResource( 4 )]
+position = Vector2( 430, -1232 )
+scale = Vector2( 0.3, 0.3 )

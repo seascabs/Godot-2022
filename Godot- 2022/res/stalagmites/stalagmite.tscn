@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Art/Normals_stalagmite.png" type="Texture" id=1]
+[ext_resource path="res://Art/stalacmite.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -32, -224, -144, -208, -224, -112, -240, -48, -240, 80, -208, 160, -112, 208, 16, 224, 144, 192, 192, 176, 224, 64, 224, 0, 224, -80, 176, -160, 112, -208, 16, -224 )
+
+[node name="stalagmite" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2( 25, 25 )
+shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D"]
+occluder = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
