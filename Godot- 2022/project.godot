@@ -21,6 +21,7 @@ enable_audio_input=true
 [autoload]
 
 MicInput="*res://res/mic_input/mic_input.tscn"
+MusicPlayer="*res://res/music/music_player.tscn"
 
 [display]
 

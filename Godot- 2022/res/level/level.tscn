@@ -388,7 +388,7 @@ scale = Vector2( 0.3, 0.3 )
 position = Vector2( 430, -1232 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="moths" type="Light2D" parent="."]
+[node name="moths" type="Node2D" parent="."]
 
 [node name="Moth" parent="moths" instance=ExtResource( 5 )]
 position = Vector2( -1536, -432 )
