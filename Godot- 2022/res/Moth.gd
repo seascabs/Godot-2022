@@ -36,11 +36,11 @@ func _physics_process(delta):
 	else:
 		if countdown > 0:
 			GetRandomMothVelocity()
-			
+
 			countdown = countdown - 1
 			velocity = move_and_slide(velocity)
 			CheckForWallCollision(velocity)
-			
+
 		else:
 			wait = waitBase
 
