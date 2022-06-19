@@ -94,6 +94,7 @@ func _physics_process(delta):
 		velocity = velocity.slide(collision.normal)
 		var body = collision.collider
 		if "Moth" in body.name:
+			$eat_sfx.play(0.9)
 			points = points + 1
 			if(points % 3 == 0):
 				get_tree().get_current_scene().get_node("sound").stream = load("res://res/Moth1.wav")
