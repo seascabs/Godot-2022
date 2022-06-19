@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://res/music/music1.ogg" type="AudioStream" id=1]
+[ext_resource path="res://res/music/music_player.gd" type="Script" id=2]
+[ext_resource path="res://res/music/music2.ogg" type="AudioStream" id=3]
 
-[node name="music_player" type="AudioStreamPlayer"]
+[node name="music_player" type="Node"]
+script = ExtResource( 2 )
+
+[node name="theme1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 volume_db = -3.0
-autoplay = true
+
+[node name="theme2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -3.0
