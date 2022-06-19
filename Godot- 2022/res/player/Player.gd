@@ -77,7 +77,8 @@ func _physics_process(delta):
 		if "Moth" in body.name:
 			points = points + 1
 			body.queue_free()
-			print(points)
+			if(points > 2):
+				get_tree().change_scene("res://res/EndScreen.tscn")
 			$AnimatedSprite.play('eat')
 
 	update_lights()
