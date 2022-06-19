@@ -43,7 +43,7 @@ texture = ExtResource( 13 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -53,9 +53,10 @@ __meta__ = {
 
 [node name="main_light" type="Light2D" parent="."]
 texture = ExtResource( 2 )
+texture_scale = 0.5
 energy = 1.2
 mode = 2
-range_height = 80.0
+range_height = 8.0
 shadow_enabled = true
 shadow_gradient_length = 15.0
 
