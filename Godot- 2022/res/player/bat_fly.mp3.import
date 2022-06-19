@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bat_fly.mp3-7a6390305c3ec01a9d95da8e123dcd0e.mp3str"
+
+[deps]
+
+source_file="res://res/player/bat_fly.mp3"
+dest_files=[ "res://.import/bat_fly.mp3-7a6390305c3ec01a9d95da8e123dcd0e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

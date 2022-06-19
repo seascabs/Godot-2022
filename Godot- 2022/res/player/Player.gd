@@ -1,28 +1,73 @@
 extends KinematicBody2D
 
+var number_of_rays: int = 10
+var ray_length: float = 2000
+
+var default_main_light_scale: Vector2 = Vector2.ONE * 0.75
+
+var acceleration = 10
+var drag = 0.03
 var speed = 200  # speed in pixels/sec
 var velocity = Vector2.ZERO
 var points = 0
 
-func get_input():
-	velocity = Vector2.ZERO
+func _ready() -> void:
+	init_rays()
+
+func init_rays() -> void:
+	var step = 2 * PI / number_of_rays
+	for i in range(number_of_rays):
+		var ray = RayCast2D.new()
+		$rays.add_child(ray)
+		ray.add_exception(self)
+		ray.cast_to = Vector2(ray_length, 0).rotated(step * i)
+		ray.enabled = true
+
+		var ray_light = Light2D.new()
+		ray_light.energy = $main_light.energy
+		ray_light.mode = Light2D.MODE_MIX
+		$ray_lights.add_child(ray_light)
+
+func update_lights() -> void:
+	$main_light.scale = default_main_light_scale + Vector2.ONE * MicInput.power
+	for i in range($rays.get_child_count()):
+		var ray = $rays.get_children()[i]
+		var light = $ray_lights.get_children()[i]
+
+		if (ray as RayCast2D).get_collider():
+			light.global_position = ray.get_collision_point()
+
+func get_input() -> Vector2:
+	var move = Vector2.ZERO
 	if Input.is_action_pressed('right'):
-		velocity.x += 1
+		move.x += 1
 	if Input.is_action_pressed('left'):
-		velocity.x -= 1
+		move.x -= 1
 	if Input.is_action_pressed('down'):
-		velocity.y += 1
+		move.y += 1
 	if Input.is_action_pressed('up'):
-		velocity.y -= 1
+		move.y -= 1
 	# Make sure diagonal movement isn't faster
-	velocity = velocity.normalized() * speed
+	move = move.normalized() * acceleration
+
+	if velocity.length():
+		var target = atan2(velocity.y, velocity.x) + PI/2
+		$AnimatedSprite.rotation = lerp_angle($AnimatedSprite.rotation, target, 0.3)
+
+	return move
 
 func _physics_process(delta):
-	get_input()
+	var move = get_input()
+	velocity += move
+	velocity = velocity.clamped(speed)
+	velocity *= 1.0 - drag
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		velocity = velocity.slide(collision.normal)
 		var body = collision.collider
 		if "Moth" in body.name:
 			points = points + 1
 			body.queue_free()
 			print(points)
+
+	update_lights()
